@@ -5,7 +5,7 @@ using namespace std;
 
 class UnionFind {
 public:
-    UnionFind(int n) {
+    explicit UnionFind(int n) {
         parent.resize(n + 1);
         for (int i = 1; i <= n; ++i) {
             parent[i] = i;
