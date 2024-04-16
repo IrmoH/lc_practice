@@ -1,6 +1,6 @@
 #include <iostream>
 #include <map>
-#include "lc547.h"
+#include "lc354.h"
 
 using namespace std;
 
@@ -20,10 +20,11 @@ void print(T t) {
 
 int main() {
     Solution s;
-    vector<vector<int>> isConnected{{1, 1, 1},
-                                    {1, 1, 1},
-                                    {1, 1, 1}};
-    auto res = s.findCircleNum(isConnected);
+    vector<vector<int>> envelopes{{30, 50},
+                                  {12, 2},
+                                  {3,  4},
+                                  {12, 15}};
+    auto res = s.maxEnvelopes(envelopes);
     print(res);
     return 0;
 }
