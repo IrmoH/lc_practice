@@ -27,3 +27,4 @@ public:
         return max_len;
     }
 };
+//最长字串

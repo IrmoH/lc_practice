@@ -86,3 +86,4 @@ private:
     DoubleLinkedList *list_;
     int capacity_;
 };
+//LRU：哈希表+双向链表

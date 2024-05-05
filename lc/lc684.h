@@ -45,3 +45,4 @@ public:
         return ans;
     }
 };
+//并查集
