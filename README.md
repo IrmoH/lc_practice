@@ -1,1 +1,1 @@
-pratice for https://leetcode.cn/
+practice for https://leetcode.cn/
