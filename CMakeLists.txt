@@ -4,8 +4,8 @@ project(lc)
 set(CMAKE_CXX_STANDARD 17)
 
 file(GLOB HEADER_FILES "./*.h" lc/*.h lcr/*.h tool/*.h)
-include_directories("tool")
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}/tool)
 
 add_executable(lc
-        main.cpp
+        main.cc
         ${HEADER_FILES})

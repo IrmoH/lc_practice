@@ -1,3 +1,4 @@
+#include <iostream>
 #include <vector>
 #include <unordered_map>
 #include <vector>
@@ -6,7 +7,7 @@
 using namespace std;
 
 template<typename T>
-void print(vector<T> vec) {
+void print(std::vector<T> &vec) {
     for (auto item: vec) {
         cout << item << " ";
     }
@@ -19,7 +20,7 @@ void print(T t) {
 }
 
 template<typename K, typename V>
-void print(unordered_map<K, V> map) {
+void print(std::unordered_map<K, V> &map) {
     cout << "map: {";
     for (auto &[key, value]: map) {
         cout << "[k:" << key << " v:" << value << "] ";
