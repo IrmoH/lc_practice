@@ -50,11 +50,13 @@ public:
         }
 
         using RetType = decltype(f(args...)); // typename std::result_of<F(Args...)>::type, 函数 f 的返回值类型
-        auto task = std::make_shared<std::packaged_task<RetType() >>(
+        // 打包成packaged_task为了可以拿到future
+        auto task = std::make_shared<std::packaged_task<RetType()>>(
                 std::bind(std::forward<F>(f), std::forward<Args>(args)...)); // 把函数入口及参数,打包(绑定)
-        std::future<RetType> future = task->get_future();
+        std::future<RetType> future = task->get_future();// get_future以绑定一个future
         {    // 添加任务到队列
-            std::lock_guard<std::mutex> lock{lock_};//对当前块的语句加锁  lock_guard 是 mutex 的 stack 封装类，构造的时候 lock()，析构的时候 unlock()
+            //对当前块的语句加锁  lock_guard 是 mutex 的 stack 封装类，构造的时候 lock()，析构的时候 unlock()
+            std::lock_guard<std::mutex> lock{lock_};
             tasks_.emplace([task]() {
                 (*task)();
             });

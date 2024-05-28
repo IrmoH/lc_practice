@@ -19,3 +19,8 @@ int lcm(int a, int b) {
     // 最小公倍数就是乘积除以最大公因数
     return a * b / gcd(a, b);
 }
+
+template<typename ...Args>
+auto sum(Args &&... args) {
+    return (args + ...);
+}
