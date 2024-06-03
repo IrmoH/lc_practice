@@ -20,7 +20,7 @@ int lcm(int a, int b) {
     return a * b / gcd(a, b);
 }
 
-template<typename ...Args>
-auto sum(Args &&... args) {
+template<typename... Args>
+auto sum(Args &&...args) {
     return (args + ...);
 }
