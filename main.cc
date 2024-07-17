@@ -14,11 +14,12 @@
 #include "tool/print_everything.h"
 #include "tool/thread_pool.h"
 
-#include "lc/lc986.h"
+#include "lc/lc713.h"
 
 int main() {
-    if (nullptr == 0) {
-        cout << "nullptr == 0" << endl;
-    }
+    Solution s;
+    vector<int> vec{10, 9, 10, 4, 3, 8, 3, 3, 6, 2, 10, 10, 9, 3};
+    auto res = s.numSubarrayProductLessThanK(vec, 19);
+    print(res);
     return 0;
 }
