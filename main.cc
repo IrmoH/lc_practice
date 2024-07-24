@@ -14,12 +14,10 @@
 #include "tool/print_everything.h"
 #include "tool/thread_pool.h"
 
-#include "lc/lc713.h"
+#include "lc/lc59.h"
 
 int main() {
     Solution s;
-    vector<int> vec{10, 9, 10, 4, 3, 8, 3, 3, 6, 2, 10, 10, 9, 3};
-    auto res = s.numSubarrayProductLessThanK(vec, 19);
-    print(res);
+    auto res = s.generateMatrix(3);
     return 0;
 }
