@@ -1,5 +1,9 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "google-explicit-constructor"
 #include <vector>
 using namespace std;
+
+//差分数组
 class Difference {
 public:
     Difference(const vector<int> &nums) {
@@ -29,3 +33,4 @@ public:
 private:
     vector<int> diff;
 };
+#pragma clang diagnostic pop

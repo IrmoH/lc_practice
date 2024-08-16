@@ -14,10 +14,11 @@
 #include "tool/print_everything.h"
 #include "tool/thread_pool.h"
 
-#include "lc/lc59.h"
+#include "lc/lc1081.h"
 
 int main() {
+    string str = "bcabc";
     Solution s;
-    auto res = s.generateMatrix(3);
+    s.smallestSubsequence(str);
     return 0;
 }

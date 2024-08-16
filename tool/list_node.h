@@ -1,3 +1,6 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "NullDereference"
+#pragma ide diagnostic ignored "google-explicit-constructor"
 #include <vector>
 
 using namespace std;
@@ -15,7 +18,7 @@ struct ListNode {
 
 
 ListNode *make_list(vector<int> &&vec) {
-    ListNode *head = new ListNode();
+    auto head = new ListNode();
     auto next = head;
     for (auto item: vec) {
         next->next = new ListNode(item);
@@ -23,3 +26,4 @@ ListNode *make_list(vector<int> &&vec) {
     }
     return head;
 }
+#pragma clang diagnostic pop
